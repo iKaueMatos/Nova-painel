@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Add } from "../../components/add/Add";
 import { DataTable } from "../../components/dataTable/DataTable";
 import { userRows } from "../../data";
-import "./users.scss";
+import { ContainerUser } from ".";
 // import { useQuery } from "@tanstack/react-query";
 
 const columns: GridColDef[] = [
@@ -68,7 +68,7 @@ export function Users() {
   // });
 
   return (
-    <div className="users">
+    <ContainerUser>
       <div className="info">
         <h1>Usuários Cadastrados</h1>
         <button onClick={() => setOpen(true)}>Adicionar novo usuário</button>
@@ -78,10 +78,10 @@ export function Users() {
 
       {/* {isLoading ? (
         "Loading..."
-      ) : (
-        <DataTable slug="users" columns={columns} rows={data} />
-      )} */}
+        ) : (
+          <DataTable slug="users" columns={columns} rows={data} />
+        )} */}
       {open && <Add slug="user" columns={columns} setOpen={setOpen} />}
-    </div>
+    </ContainerUser>
   );
 };

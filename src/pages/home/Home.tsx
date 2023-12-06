@@ -12,7 +12,7 @@ import {
   chartBoxRevenue,
   chartBoxUser,
 } from "../../data";
-import "./home.scss";
+
 
 export function Home() {
   return (

@@ -1,5 +1,7 @@
 import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from "recharts";
 import "./pieChartBox.scss";
+import { ContainerNavigation } from "../../layout/components/menu";
+import { Options, Title } from ".";
 
 const data = [
   { name: "Mobile", value: 400, color: "#0088FE" },
@@ -10,7 +12,8 @@ const data = [
 
 export function PieChartBox() {
   return (
-    <div className="pieChartBox">
+    <ContainerNavigation>
+
       <h1>Leads por fonte</h1>
       <div className="chart">
         <ResponsiveContainer width="99%" height={300}>
@@ -32,17 +35,17 @@ export function PieChartBox() {
           </PieChart>
         </ResponsiveContainer>
       </div>
-      <div className="options">
+      <Options>
         {data.map((item) => (
           <div className="option" key={item.name}>
-            <div className="title">
+            <Title>
               <div className="dot" style={{ backgroundColor: item.color }} />
               <span>{item.name}</span>
-            </div>
+            </Title>
             <span>{item.value}</span>
           </div>
         ))}
-      </div>
-    </div>
+        </Options>
+      </ContainerNavigation>
   );
 };

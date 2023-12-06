@@ -1,17 +1,24 @@
 import styled from "styled-components";
 
+const breakpoints = {
+  sm: "480px",
+  md: "768px",
+  lg: "1024px",
+  xl: "1200px",
+  xxl: "1400px",
+};
+
 export const ContainerNavigation = styled.div`
     width: 250px;
     padding: 5px 20px;
     border-right: 2px solid $soft-bg;
 
-    @include lg{
-    width: max-content;
+    @media screen and(max-width:${breakpoints.lg}) {
+      width: max-content;
     }
 `;
 
 export const Navigation = styled.div`
-.item {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -23,10 +30,9 @@ export const Navigation = styled.div`
       color: $soft-color;
       text-transform: uppercase;
 
-      @include lg{
+      @media screen and(max-width:${breakpoints.lg}) {
         display: none;
       }
-    }
 
     .listItem {
       display: flex;
@@ -40,7 +46,7 @@ export const Navigation = styled.div`
       }
 
       .listItemTitle{
-        @include lg{
+        @media screen and(${breakpoints.lg}) {
           display: none;
         }
       }

@@ -1,5 +1,5 @@
 import { GridColDef } from "@mui/x-data-grid";
-import "./add.scss";
+import { Close, ContainerAdd, Form, H1, Modal } from ".";
 // import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 type Props = {
@@ -47,13 +47,13 @@ export function Add(props: Props) {
     props.setOpen(false)
   };
   return (
-    <div className="add">
-      <div className="modal">
-        <span className="close" onClick={() => props.setOpen(false)}>
+    <ContainerAdd>
+      <Modal>
+        <Close className="close" onClick={() => props.setOpen(false)}>
           X
-        </span>
-        <h1>Adicionar novo {props.slug}</h1>
-        <form onSubmit={handleSubmit}>
+        </Close>
+        <H1>Adicionar novo {props.slug}</H1>
+        <Form onSubmit={handleSubmit}>
           {props.columns
             .filter((item) => item.field !== "id" && item.field !== "img")
             .map((column) => (
@@ -62,9 +62,9 @@ export function Add(props: Props) {
                 <input type={column.type} placeholder={column.field} />
               </div>
             ))}
-          <button>Send</button>
-        </form>
-      </div>
-    </div>
+          <button>Enviar</button>
+        </Form>
+        </Modal>
+    </ContainerAdd>
   );
 };

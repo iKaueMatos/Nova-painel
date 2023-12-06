@@ -6,7 +6,8 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import "./bigChartBox.scss";
+
+import { ContainerBigChartBox } from ".";
 
 const data = [
   {
@@ -55,7 +56,7 @@ const data = [
 
 export function BigChartBox() {
   return (
-    <div className="bigChartBox">
+    <ContainerBigChartBox>
       <h1>Análise de receita</h1>
       <div className="chart">
         <ResponsiveContainer width="99%" height="100%">
@@ -95,6 +96,6 @@ export function BigChartBox() {
           </AreaChart>
         </ResponsiveContainer>
       </div>
-    </div>
+      </ContainerBigChartBox>
   );
 };

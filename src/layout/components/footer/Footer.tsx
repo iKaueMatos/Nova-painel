@@ -1,10 +1,10 @@
-import "./footer.scss"
+import { ContainerFooter } from "."
 
 export function Footer() {
   return (
-    <div className="footer">
+    <ContainerFooter>
       <span>Nova Software</span>
       <span>© Nova Software Admin Dashboard</span>
-    </div>
+    </ContainerFooter>
   )
 }

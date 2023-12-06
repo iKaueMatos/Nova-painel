@@ -1,5 +1,5 @@
 import { Bar, BarChart, ResponsiveContainer, Tooltip } from "recharts";
-import "./barChartBox.scss";
+import { ContainerBarChartBox } from ".";
 
 type Props = {
   title: string;
@@ -10,7 +10,7 @@ type Props = {
 
 export function BarChartBox(props: Props) {
   return (
-    <div className="barChartBox">
+    <ContainerBarChartBox>
       <h1>{props.title}</h1>
       <div className="chart">
         <ResponsiveContainer width="99%" height={150}>
@@ -24,6 +24,6 @@ export function BarChartBox(props: Props) {
           </BarChart>
         </ResponsiveContainer>
       </div>
-    </div>
+    </ContainerBarChartBox>
   );
 };
