@@ -38,31 +38,38 @@ export const Form = styled.form`
     flex-wrap: wrap;
     max-width: 500px;
     justify-content: space-between;
-
-    .item {
-      width: 40%;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-bottom: 20px;
-
-      label {
-        font-size: 14px;
-      }
-
-      input {
-        padding: 10px;
-        background-color: transparent;
-        color: white;
-        outline: none;
-        border: 1px solid $soft-color;
-        border-radius: 3px;
-      }
-    }
-    button {
-      width: 100%;
-      padding: 10px;
-      cursor: pointer;
-    }
   }
+`;
+  
+export const Button = styled.button`
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  background:${props => props.theme['white']};
+  color: ${props => props.theme['black-100']};
+  font-weight: bold;
+`;
+  
+export const Input = styled.input`
+  padding: 10px;
+  background-color: transparent;
+  color: white;
+  outline: none;
+  border: 1px solid ${props => props.theme['soft-bg']};
+  border-radius: 3px;
+  width: 300px;
+`;
+
+export const Item = styled.div`
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+`;
+
+export const Label = styled.label`
+  font-size: 14px;
 `;

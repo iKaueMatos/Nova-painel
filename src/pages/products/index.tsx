@@ -3,7 +3,7 @@ import { useState } from "react";
 import { products } from "../../data.ts";
 import { Add } from "../home/components/add/index.tsx";
 import { DataTable } from "../home/components/dataTable/index.tsx";
-import { ContainerProducts } from "./style.ts";
+import { Button, ContainerProducts } from "./style.ts";
 
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 90 },
@@ -70,7 +70,7 @@ export function Products() {
     <ContainerProducts>
       <div className="info">
         <h1>Produtos</h1>
-        <button onClick={() => setOpen(true)}>Adicionar novos Produtos</button>
+        <Button onClick={() => setOpen(true)}>Adicionar novos Produtos</Button>
       </div>
       <DataTable slug="products" columns={columns} rows={products} />
       {/* TEST THE API */}

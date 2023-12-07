@@ -6,10 +6,14 @@ export const ContainerProducts = styled.div`
     align-items: center;
     gap: 20px;
     margin-bottom: 20px;
-
-    button {
-      padding: 5px;
-      cursor: pointer;
-    }
   }
+  `;
+  
+export const Button = styled.button`
+  padding: 5px;
+  cursor: pointer;
+  border-radius:8px;
+  border:none;
+  background:${props => props.theme['white']};
+  color: ${props => props.theme['black-100']};
 `;

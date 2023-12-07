@@ -1,5 +1,5 @@
 import { GridColDef } from "@mui/x-data-grid";
-import { Close, ContainerAdd, Form, H1, Modal } from "./style";
+import { Button, Close, ContainerAdd, Form, H1, Input, Item, Label, Modal } from "./style";
 // import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 type Props = {
@@ -57,12 +57,12 @@ export function Add(props: Props) {
           {props.columns
             .filter((item) => item.field !== "id" && item.field !== "img")
             .map((column) => (
-              <div className="item">
-                <label>{column.headerName}</label>
-                <input type={column.type} placeholder={column.field} />
-              </div>
+              <Item>
+                <Label>{column.headerName}</Label>
+                <Input type={column.type} placeholder={column.field} />
+              </Item>
             ))}
-          <button>Enviar</button>
+          <Button>Enviar</Button>
         </Form>
         </Modal>
     </ContainerAdd>
