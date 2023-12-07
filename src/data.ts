@@ -1,11 +1,11 @@
 export const menu = [
   {
     id: 1,
-    title: "main",
+    title: "Principal",
     listItems: [
       {
         id: 1,
-        title: "Homepage",
+        title: "Pagina inicial",
         url: "/",
         icon: "home.svg",
       },
@@ -19,29 +19,29 @@ export const menu = [
   },
   {
     id: 2,
-    title: "lists",
+    title: "Lista",
     listItems: [
       {
         id: 1,
-        title: "Users",
+        title: "Usuários",
         url: "/users",
         icon: "user.svg",
       },
       {
         id: 2,
-        title: "Products",
+        title: "Produtos",
         url: "/products",
         icon: "product.svg",
       },
       {
         id: 3,
-        title: "Orders",
+        title: "Pedidos",
         url: "/orders",
         icon: "order.svg",
       },
       {
         id: 4,
-        title: "Posts",
+        title: "Postagens",
         url: "/posts",
         icon: "post2.svg",
       },
@@ -49,29 +49,29 @@ export const menu = [
   },
   {
     id: 3,
-    title: "general",
+    title: "Geral",
     listItems: [
       {
         id: 1,
-        title: "Elements",
+        title: "Elementos",
         url: "/",
         icon: "element.svg",
       },
       {
         id: 2,
-        title: "Notes",
+        title: "Notas",
         url: "/",
         icon: "note.svg",
       },
       {
         id: 3,
-        title: "Forms",
+        title: "Formulário",
         url: "/",
         icon: "form.svg",
       },
       {
         id: 4,
-        title: "Calendar",
+        title: "Calendario",
         url: "/",
         icon: "calendar.svg",
       },
@@ -79,11 +79,11 @@ export const menu = [
   },
   {
     id: 4,
-    title: "Maintenance",
+    title: "Manutenção",
     listItems: [
       {
         id: 1,
-        title: "Settings",
+        title: "Configurações",
         url: "/",
         icon: "setting.svg",
       },
@@ -97,11 +97,11 @@ export const menu = [
   },
   {
     id: 5,
-    title: "analytics",
+    title: "análise",
     listItems: [
       {
         id: 1,
-        title: "Charts",
+        title: "Gráficos",
         url: "/",
         icon: "chart.svg",
       },
