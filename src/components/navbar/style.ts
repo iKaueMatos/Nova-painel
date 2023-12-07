@@ -12,17 +12,18 @@ export const Logo = styled.div`
   display: flex;
   align-items: center;
   font-weight: bold;
-  font-size:20px;
+  font-size: 20px;
   gap: 10px;
 `;
 
 export const Icons = styled.div`
   display: flex;
   align-items: center;
-  gap: 92px;
+  gap: 15px;
+  margin-left: auto;
 
   .icon {
-    @media screen and(max-width: ${breakpoints.sm}) {
+    @media screen and (max-width: ${breakpoints.sm}) {
       display: none;
     }
   }
@@ -39,7 +40,7 @@ export const Navigation = styled.div`
 export const Notification = styled.div`
   position: relative;
 `;
-  
+
 export const Span = styled.span`
   background-color: red;
   color: white;

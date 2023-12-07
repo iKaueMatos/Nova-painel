@@ -11,6 +11,7 @@ const breakpoints = {
 export const ContainerTopBox = styled.div`
   h1 {
     margin-bottom: 20px;
+    font-size: 20px;
 
     @media screen and(max-width:${breakpoints.xxl}) {
       font-size: 24px;

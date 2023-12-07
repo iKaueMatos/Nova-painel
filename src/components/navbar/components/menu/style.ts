@@ -11,7 +11,7 @@ const breakpoints = {
 export const ContainerNavigation = styled.div`
     width: 250px;
     padding: 5px 20px;
-    border-right: 2px solid $soft-bg;
+    border-right: 2px solid ${props => props.theme['soft-bg']};
 
     @media screen and(max-width:${breakpoints.lg}) {
       width: max-content;

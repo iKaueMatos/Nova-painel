@@ -1,17 +1,27 @@
+import { CiSettings } from "react-icons/ci";
+import { FaSearch } from "react-icons/fa";
+import { FaExpand } from "react-icons/fa6";
+import { IoIosNotifications } from "react-icons/io";
+import { MdOutlineApps } from "react-icons/md";
+import Logotipo from "../../assets/img/logo.png";
+
 import { Icons, Logo, Navigation, Notification, Span, User } from "./style";
 
 export function Navbar() {
   return (
     <Navigation>
       <Logo>
-        <span>Nova Software</span>
+        <img src={Logotipo} alt="Logotipo da empresa Nova software" style={{width: "56px", height: "56px", display:"flex", justifyContent: "center"}} />
+        <span>
+            Nova Software
+        </span>
       </Logo>
       <Icons>
-        <img src="/search.svg" alt="" className="icon" />
-        <img src="/app.svg" alt="" className="icon" />
-        <img src="/expand.svg" alt="" className="icon" />
+        <FaSearch size={22} />
+        <MdOutlineApps size={28} />
+        <FaExpand size={22} />
         <Notification>
-          <img src="/notifications.svg" alt="" />
+          <IoIosNotifications size={25} />
           <Span>1</Span>
         </Notification>
         <User>
@@ -21,8 +31,8 @@ export function Navbar() {
           />
           <span>Kauê</span>
         </User>
+        <CiSettings size={28} />
       </Icons>
-      <img src="/settings.svg" alt="" className="icon" />
     </Navigation>
   );
 }

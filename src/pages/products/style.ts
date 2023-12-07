@@ -16,4 +16,5 @@ export const Button = styled.button`
   border:none;
   background:${props => props.theme['white']};
   color: ${props => props.theme['black-100']};
+  font-weight: bold;
 `;
